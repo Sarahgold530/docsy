@@ -25,7 +25,7 @@ There are four variables you can configure in `config.toml` to set up links, as 
 The URL for your site's source repository. This is used to generate the **Edit this page**, **Create child page**, and **Create documentation issue** links.
 
 ```toml
-github_repo = "https://github.com/google/docsy"
+github_repo = "https://bitbucket.org/techeleven/tech11-docs-manual.git"
 ```
 
 ### `github_subdir` (optional)
