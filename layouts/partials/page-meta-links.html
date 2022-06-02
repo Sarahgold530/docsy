@@ -30,8 +30,8 @@
     {{ $gh_repo_path = replaceRE . $ghs_rename $gh_repo_path -}}
   {{ end -}}
 
-  {{ $viewURL := printf "%s/tree/%s" $gh_repo $gh_repo_path -}}
-  {{ $editURL := printf "%s/edit/%s" $gh_repo $gh_repo_path -}}
+  {{ $viewURL := printf "%s/src/%s" $gh_repo $gh_repo_path -}}
+  {{ $editURL := printf "%s/src/%s?mode=edit&at=%s" $gh_repo $gh_repo_path $gh_branch -}}
   {{ $issuesURL := printf "%s/issues/new?title=%s" $gh_repo (safeURL $.Title ) -}}
   {{ $newPageStub := resources.Get "stubs/new-page-template.md" -}}
   {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL -}}
